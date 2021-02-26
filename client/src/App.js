@@ -54,7 +54,7 @@ const App = () => {
                                         Use the form to create a new post or scroll down to view posts.
                                     </Typography>
                                 </Grid>
-                                <Grid item xs={12} sm={5}>
+                                <Grid className={classes.desktopForm} item xs={12} sm={5}>
                                     <Form currentId={currentId} setCurrentId={setCurrentId} />
                                 </Grid>
                             </Grid>
@@ -66,6 +66,11 @@ const App = () => {
                 <Grow in>
                     <Container>
                         <Grid container alignItems="stretch">
+                            <Grid className={classes.mobileForm} item xs={12} sm={5}>
+                                <Form currentId={currentId} setCurrentId={setCurrentId} />
+                                <br></br>
+                                <br></br>
+                            </Grid>
                             <Grid item xs={12}>
                                 <Posts setCurrentId={setCurrentId} />
                             </Grid>

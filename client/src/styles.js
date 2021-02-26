@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { normalizeUnits } from 'moment';
 
 export default makeStyles((theme) => ({
       appBar: {
@@ -24,14 +25,11 @@ export default makeStyles((theme) => ({
           flexDirection: "column",
         },
         About1: {
-          fontSize: '20px !important',
+          fontSize: '40px !important',
         },
-        formGrid: {
-          paddingTop: '2vh;',
-        },
-        About2: {
+        desktopForm: {
           display: 'none',
-        }
+        },
       },
       About1: {
         fontFamily: 'Exo',
@@ -44,5 +42,9 @@ export default makeStyles((theme) => ({
         color: '#fff',
         fontWeight: '600',
       },
-
+      [theme.breakpoints.up('sm')]:{
+        mobileForm: {
+          display: 'none',
+        },
+      },
 }));
